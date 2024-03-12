@@ -1,0 +1,207 @@
+@import url('reset.css');
+
+
+@font-face {
+    font-family: 'Nunito Sans 10pt Condensed';
+    src: url('../fonts/nanito-sans/NunitoSans10ptCondensed-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 10pt Condensed';
+    src: url('../fonts/nanito-sans/NunitoSans10ptCondensed-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans 10pt Expanded';
+    src: url('../fonts/nanito-sans/NunitoSans10ptExpanded-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+.page{
+    font-family: 'Nunito Sans 10pt' sans-serif;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container h1::after{
+	content: '👋';
+}
+
+.header{
+    color:black;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.header h1{
+    font-weight: 400;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.header a{
+    color: lightyellow;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.table-data{
+	margin: 30px 0 0;
+	width: 100%;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px #e4e4ef;
+	border-radius: 8px;
+}
+
+.user, .email{
+	width: 400px;
+}
+
+.phone{
+	width: 160px;
+}
+
+
+.status{
+	display: flex;
+	justify-content: space-around;
+}
+
+.table-data th{
+	padding: 18px 16px;
+	text-align: left;
+	font-weight: 700;
+}
+
+.table-data td{
+	padding: 8px 16px;
+	vertical-align: middle;
+}
+
+.last{
+	text-align: center;
+}
+
+
+.table-data td p + p{
+	font-size: 12px;
+	line-height: 20px;
+	color: #808080;
+}
+.table-data th, 
+.table-data td{
+	border-top: 1px solid #e4e4ef;
+}
+.button{
+    color: #BDBCDB;
+	background: #F8F9FB;
+	font-size: 12px;
+	padding: 8px 24px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+.button.blue{
+	color: #605DEC;
+	background: #EDEDFE;
+}  
+.button.green{
+color: #31AA27;
+background: #EBF6EB;
+}
+
+.button.yellow{
+color: #E99518;
+background: #FFF4E4;
+}
+.button.red{
+color: #F93232;
+background: #FFF0F0;
+}
+
+
+.aside{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 102px;
+    background: #EFEBFF;
+    transition: width 1s linear;
+    padding: 39px 27px 0;
+    overflow: hidden;
+}
+
+.aside:hover{
+    width: 300px;
+}
+
+.aside:hover + .wrapper {
+    padding-left: 300px;
+}
+
+.wrapper{
+    padding-left: 102px;
+    transition: padding 1s linear;
+}
+
+.aside:hover{
+    width: 300px;
+}
+
+.aside:hover  .aside-text{
+    opacity: 1;
+}
+.aside_h2{
+    margin: 0 0 90px 10px;
+}
+
+.aside_li{
+    margin: 20px 0 0 10px
+}
+.aside-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.aside-text{
+    color: #1a1a1a;
+
+    font-weight: 400;
+    letter-spacing: -0.16px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.aside-link:hover .aside-icon {
+    transform: rotate(-45deg) scale(1.4);
+}
+
+.aside-link .aside-link-border {
+    border: 2px solid rgb(0, 0, 0);
+    line-height: 10px;
+    padding: 2px;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.aside-icon {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    transform: rotate(-45deg);
+	transition: transform .5s linear;
+}
